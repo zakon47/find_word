@@ -8,24 +8,24 @@
 ```
 arr := []string{"СЛОВО","АВТО"}
 
-Prefix("BMWАВТО", arr) => "", "", "no match found"
-Prefix("АВТОBMW", arr) => "АВТО", "BMW", nil
-Prefix("АвтоBMW", arr) => "", "", "no match found"
+HasPrefix("BMWАВТО", arr) => "", "", "no match found"
+HasPrefix("АВТОBMW", arr) => "АВТО", "BMW", nil
+HasPrefix("АвтоBMW", arr) => "", "", "no match found"
 
-Suffix("BMWАВТО", arr) => "АВТО", "BMW", nil
-Suffix("BMWАвто", arr) => "", "", "no match found"
-Suffix("АВТОBMW", arr) => "", "", "no match found"
+HasSuffix("BMWАВТО", arr) => "АВТО", "BMW", nil
+HasSuffix("BMWАвто", arr) => "", "", "no match found"
+HasSuffix("АВТОBMW", arr) => "", "", "no match found"
 ```
 Без учета регистра
 ```
 arr := []string{"СЛОВО","АВТО", ""}
 
-PrefixWithoutCase("BMWАВТО", arr) => "", "", "no match found"
-PrefixWithoutCase("АВТОBMW", arr) => "АВТО", "BMW", nil
-PrefixWithoutCase("АвтоBMW", arr) => "Авто", "BMW", nil
+HasPrefixWithoutCase("BMWАВТО", arr) => "", "", "no match found"
+HasPrefixWithoutCase("АВТОBMW", arr) => "АВТО", "BMW", nil
+HasPrefixWithoutCase("АвтоBMW", arr) => "Авто", "BMW", nil
 
-SuffixWithoutCase("BMWАВТО", arr) => "АВТО", "BMW", nil
-SuffixWithoutCase("BMWАвто", arr) => "Авто", "BMW", nil
-SuffixWithoutCase("АВТОBMW", arr) => "", "", "no match found"
+HasSuffixWithoutCase("BMWАВТО", arr) => "АВТО", "BMW", nil
+HasSuffixWithoutCase("BMWАвто", arr) => "Авто", "BMW", nil
+HasSuffixWithoutCase("АВТОBMW", arr) => "", "", "no match found"
 ```
 В массиве пустая строка - ИГНОРИРУЕТСЯ
