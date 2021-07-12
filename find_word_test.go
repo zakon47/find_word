@@ -2,7 +2,7 @@ package find_word_test
 
 import (
 	"github.com/stretchr/testify/assert"
-	"github.com/zakon47/find_value"
+	"github.com/zakon47/find_word"
 	"testing"
 )
 
